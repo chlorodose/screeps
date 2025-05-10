@@ -1,5 +1,7 @@
 use tracing::debug;
 
+mod common;
+
 fn main() {
     tracing_subscriber::FmtSubscriber::builder().pretty().with_env_filter(tracing_subscriber::EnvFilter::from_env("LOG_LEVEL")).init();
     debug!("Initializing v8({})...", v8::VERSION_STRING);
