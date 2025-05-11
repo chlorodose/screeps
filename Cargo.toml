@@ -5,6 +5,7 @@ edition = "2024"
 publish = false
 
 [dependencies]
+arrayvec = "0.7.6"
 bevy = { version = "0.16.0", default-features = false, features = ["multi_threaded", "std"] }
 rand = "0.9.1"
 thiserror = "2.0.12"

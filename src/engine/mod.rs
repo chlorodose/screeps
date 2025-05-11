@@ -9,6 +9,7 @@ pub struct EnginePlugin;
 
 impl Plugin for EnginePlugin {
     fn build(&self, app: &mut App) {
+        // EntityMap
         app.insert_resource(EntityIdMap::default()).world_mut().register_component_hooks::<Id>().on_insert(entity_map_insert).on_remove(entity_map_remove);
     }
     fn name(&self) -> &str {
